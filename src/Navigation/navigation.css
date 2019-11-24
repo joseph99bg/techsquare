@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+.top-bar {
+    background-color: #20AAEA;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.top-bar a {
+    font-family: 'Orbitron';
+    color: #FFF;
+    padding-left: 20px;
+}
+.navigation-holder {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+}
+.navigation-list {
+    display: flex;
+    align-items: center;
+}
+.navigation-list li {
+    padding: 0 15px;
+    list-style: none;
+}
+.navigation-list li a {
+    font-family: 'Orbitron';
+    color: #7500D8;
+}

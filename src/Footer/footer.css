@@ -1,0 +1,11 @@
+.copyright-holder {
+    background-color: #20AAEA;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.copyright-holder span {
+    color: #FFF;
+    font-family: 'Orbitron';
+    font-size: 14px;
+}

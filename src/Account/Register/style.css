@@ -1,0 +1,52 @@
+.login-register-page {
+    max-width: 80%;
+    margin: 30px auto 100px auto;
+    text-align: center;
+}
+.login-register-page h1 {
+    font-family: 'Orbitron';
+    color: #20aaea;
+    font-weight: 600;
+    font-size: 40px;
+}
+.login-register-page label {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: #313131;
+    margin-bottom: 10px;
+}
+.login-register-page input,
+.login-register-page textarea {
+    font-family: 'Montserrat';
+    color: #000000;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid #383838;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login-register-page button {
+    background: #7500D8;
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto 10px auto;
+    border: 1px solid #7500D8;
+    padding: 8px 30px;
+    cursor: pointer;
+}
+.login-register-page .error {
+    width: 50%;
+    margin: 0 auto 30px auto;
+    background: #ffd8d8;
+    color: #f00;
+    border: 1px solid #F00;
+    padding: 10px 20px;
+    font-size: 18px;
+}

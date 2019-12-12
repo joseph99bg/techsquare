@@ -24,7 +24,7 @@ class SinglePost extends React.Component {
         return post ? <div className="post-item">
                 <img src={this.state.post.image} alt={this.state.post.title}/>
                 <h4 className="title">{this.state.post.title}</h4>
-                <p className="description">{this.state.post.description}</p>
+                <p className="description">{this.state.post.content}</p>
             </div> : <div>Loading...</div>
     }
 }

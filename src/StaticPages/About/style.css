@@ -1,0 +1,20 @@
+.about-page {
+    max-width: 80%;
+    margin: 30px auto 100px auto;
+}
+.about-page h1 {
+    font-family: 'Orbitron';
+    color: #20aaea;
+    font-weight: 600;
+    font-size: 40px;
+}
+.about-page p {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.about-page li {
+    font-size: 18px;
+    margin: 5px 0;
+    font-family: 'Montserrat';
+}

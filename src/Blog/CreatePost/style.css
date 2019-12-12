@@ -1,0 +1,54 @@
+.create-post-page {
+    max-width: 80%;
+    margin: 30px auto 100px auto;
+    text-align: center;
+}
+.create-post-page h1 {
+    font-family: 'Orbitron';
+    color: #20aaea;
+    font-weight: 600;
+    font-size: 40px;
+}
+.create-post-page label {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: #313131;
+    margin-bottom: 10px;
+}
+.create-post-page input,
+.create-post-page textarea {
+    font-family: 'Montserrat';
+    color: #000000;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid #383838;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.create-post-page button,
+.create-post-page a {
+    background: #7500D8;
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto 10px auto;
+    border: 1px solid #7500D8;
+    padding: 8px 30px;
+    cursor: pointer;
+    width: max-content;
+}
+.create-post-page .error {
+    width: 80%;
+    margin: 0 auto;
+    background: #ffd8d8;
+    color: #f00;
+    border: 1px solid #F00;
+    padding: 10px 20px;
+    font-size: 18px;
+}

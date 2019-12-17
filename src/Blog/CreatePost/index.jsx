@@ -54,15 +54,13 @@ class CreatePost extends React.Component {
                 })
             })
     }
-    
     showWidget = (widget) => {
         widget.open();
     }
     checkUploadResult = (resultEvent) => {
         if (resultEvent.event === 'success') {
             this.setState({ image: resultEvent.info.secure_url })
-        }
-        
+        }  
     }
 
     render() {
@@ -76,7 +74,6 @@ class CreatePost extends React.Component {
 
         return (
             <div className="create-post-page">
-                {/* <Image cloudName="techsquare" publicId="sample" width="300" crop="scale" /> */}
                 <h1>Create Post</h1>
                 <form onSubmit={this.submitHandler}>
                     <div>

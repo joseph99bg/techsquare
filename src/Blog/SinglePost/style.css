@@ -1,6 +1,6 @@
 .post-item {
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
 }
 .post-item img {
     max-width: 100%;
@@ -8,11 +8,23 @@
 }
 .post-item .title {
     font-family: 'Orbitron';
-    font-size: 30px;
+    font-size: 40px;
     color: #20AAEA;
+    margin-bottom: 10px;
+}
+.post-item .author {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    margin-top: 0;
 }
 .post-item .description {
     font-size: 18px;
     color: #000;
     font-family: 'Monserrat';
+}
+.post-item hr {
+    border: 0;
+    border-bottom: 1px solid #9c9c9c;
+    margin: 40px 0;
 }

@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
-@import url('../../node_modules/@fortawesome/fontawesome-free/css/all.css');
-
 * {
     box-sizing: border-box;
 }
@@ -15,6 +11,8 @@
     font-family: 'Orbitron';
     color: #FFF;
     padding-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
 }
 .navigation-holder {
     display: flex;
@@ -32,5 +30,7 @@
 }
 .navigation-list li a {
     font-family: 'Orbitron';
-    color: #7500D8;
+    color: #717ED5;
+    text-decoration: none;
+    font-size: 20px;
 }

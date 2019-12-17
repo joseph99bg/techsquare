@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Link from '../shared/Link';
+import { Link } from 'react-router-dom';
 
 import './navigation.css';
 
@@ -12,7 +11,8 @@ class Navigation extends React.Component {
                 <div className="top-bar">
                     { !isLogged && <Link to="/login">Login</Link> }
                     { !isLogged && <Link to="/register">Register</Link> }
-                    { isLogged && <Link to="/profile">My Profile</Link> }
+                    { isLogged && <Link to="/my-posts">My Posts</Link> }
+                    { isLogged && <Link to="/logout">Logout</Link> }
                 </div>
                 <div className="navigation-holder">
                     <div className="logo-holder">
@@ -27,12 +27,9 @@ class Navigation extends React.Component {
                         <li>
                             <Link to="/about">About</Link>
                         </li>
-                        {/* <li>
-                            <a href="#">My Posts</a>
-                        </li> */}
-                        <li>
-                            <a href="/add-post">Add Post</a>
-                        </li>
+                        { isLogged && <li>
+                            <Link to="/add-post">Add Post</Link>
+                        </li> }
                         <li>
                             <Link to="/contacts">Contacts</Link>
                         </li>

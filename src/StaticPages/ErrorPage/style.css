@@ -1,0 +1,14 @@
+.error-page h1 {
+    text-align: center;
+    font-size: 10vw;
+    line-height: 10vw;
+    margin: 5vh 0 1vh 0;
+    font-family: 'Orbitron';
+    color: #707ed6;
+}
+.error-page h3 {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Montserrat';
+    color: #707ed6;
+}

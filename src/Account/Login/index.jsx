@@ -4,6 +4,10 @@ import './style.css'
 
 class Login extends React.Component {
 
+    state = {
+        error: null
+    }
+
     usernameChangeHandler = this.props.controlChangeHandlerFactory('username');
     passwordChangeHandler = this.props.controlChangeHandlerFactory('password');
 
@@ -11,14 +15,20 @@ class Login extends React.Component {
         const errors = this.props.getFormErrorState();
         if (!!errors) { return; }
         const data = this.props.getFormState();
-        this.props.login(this.props.history, data);
+        this.props.login(this.props.history, data)
+            .catch(err => {
+                this.setState({
+                    error: err
+                })
+            });
     }
 
     render() {
+        const { error } = this.state;
         return(
             <div className="login-register-page">
                 <h1>Login Page</h1>
-                <form onSubmit={this.submitHandler}>
+                <form>
                     <div>
                         <label htmlFor='username'>Username:</label>
                         <input type="text"
@@ -29,7 +39,8 @@ class Login extends React.Component {
                         <input type="password"
                             onChange={this.passwordChangeHandler} />
                     </div>
-                    <button type="submit">Login</button>
+                    { error && <div className="error">{error}</div> }
+                    <button type="button" onClick={this.submitHandler}>Login</button>
                 </form>
             </div>
         )

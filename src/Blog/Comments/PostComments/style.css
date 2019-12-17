@@ -1,0 +1,19 @@
+.post-comments-list h1 {
+    font-family: 'Orbitron';
+    color: #717ED5;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.post-comment {
+    background: #e6e6e6;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.post-comment .author-name {
+    margin-top: 0;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+.post-comment .comment {
+    margin-bottom: 0;
+}

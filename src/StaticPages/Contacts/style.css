@@ -1,0 +1,38 @@
+.contacts-page {
+    text-align: center;
+    margin: 30px auto 0 auto;
+}
+.contacts-page h1 {
+    font-family: 'Orbitron';
+    color: #20aaea;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.contacts-page h3 {
+    font-family: 'Orbitron';
+    color: #717ED5;
+    font-size: 25px;
+}
+.contacts-page i {
+    color: #717ED5;
+    font-size: 25px;;
+}
+.contacts-page span {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 20px;
+    display: block;
+}
+.contacts-page span a {
+    color: #717ED5;
+    text-decoration: none;
+}
+.contacts-page span a:hover {
+    text-decoration: underline;
+}
+.contacts-page iframe {
+    margin-top: 50px;;
+}

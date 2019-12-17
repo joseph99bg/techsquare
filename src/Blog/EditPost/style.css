@@ -30,7 +30,7 @@
 }
 .create-post-page button,
 .create-post-page a {
-    background: #7500D8;
+    background: #717ED5;
     color: #FFF;
     font-family: 'Montserrat';
     font-weight: 600;
@@ -38,7 +38,7 @@
     font-size: 16px;
     display: block;
     margin: 30px auto 10px auto;
-    border: 1px solid #7500D8;
+    border: 1px solid #717ED5;
     padding: 8px 30px;
     cursor: pointer;
     width: max-content;

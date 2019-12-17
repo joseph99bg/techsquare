@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Navigation from '../Navigation/navigation';
 import BlogList from '../Blog/List';
 import SinglePost from '../Blog/SinglePost';
@@ -9,11 +8,11 @@ import Footer from '../Footer/footer';
 import Register from '../Account/Register';
 import Login from '../Account/Login';
 import Logout from '../Account/Logout';
-import Profile from '../Account/Profile';
 import About from '../StaticPages/About';
 import Contacts from '../StaticPages/Contacts';
-// import Profile from '../Profile/Profile';
-// import NotFound from '../NotFound/NotFound';
+import ErrorPage from '../StaticPages/ErrorPage';
+import './App.css';
+
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import userService from '../services/user-services';
 
@@ -51,9 +50,9 @@ class App extends React.Component {
     }
 
     login = (history, data) => {
-        userService.login(data).then(() => {
+        return userService.login(data).then(() => {
             this.setState({ isLogged: true });
-            history.push('/posts');
+            history.push('/');
         });
     }
 
@@ -68,16 +67,20 @@ class App extends React.Component {
                     <div className="Container">
                         <Switch>
                             <Route path="/" exact><Redirect to="/posts"/></Route>
-                            <Route path="/posts" component={render(BlogList, { isLogged })}/>
-                            <Route path="/register" component={Register}/>
-                            <Route path="/login" render={render(Login, { isLogged, login: this.login })}/>
-                            <Route path="/logout" render={render('Logout', Logout, { isLogged, logout: this.logout })} />
+                            <Route key="posts" path="/posts" render={render(BlogList, { isLogged })}/>
+                            <Route path="/post/:id" render={render(SinglePost, { isLogged })}/>
+                            { isLogged && <Route key="my-posts" path="/my-posts" render={render(BlogList, { isLogged, myPosts: true })} /> }
+                            { isLogged && <Route path="/add-post" component={CreatePost}/> }
+                            { isLogged && <Route path="/edit-post/:id" component={EditPost}/> }
+
+                            { !isLogged && <Route path="/register" component={Register}/> }
+                            { !isLogged && <Route path="/login" render={render(Login, { isLogged, login: this.login })}/> }
+                            { isLogged && <Route path="/logout" render={render(Logout, { isLogged, logout: this.logout })} /> }
+
                             <Route path="/about" component={About}/>
                             <Route path="/contacts" component={Contacts}/>
-                            <Route path="/profile" component={Profile}/>
-                            <Route path="/post/:id" component={SinglePost}/>
-                            <Route path="/add-post" component={CreatePost}/>
-                            <Route path="/edit-post/:id" component={EditPost}/>
+                            
+                            <Route path="*" component={ErrorPage}/>
                         </Switch>
                     </div>
                     {/* <Footer isLogged={isLogged} /> */}

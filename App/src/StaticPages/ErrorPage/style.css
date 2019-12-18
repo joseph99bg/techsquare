@@ -12,3 +12,19 @@
     font-family: 'Montserrat';
     color: #707ed6;
 }
+.error-page .btn-holder {
+    text-align: center;
+}
+.error-page button {
+    font-size: 30px;
+    color: #FFF;
+    font-family: 'Montserrat';
+    background: #707ed6;
+    padding: 20px 40px;
+    border: 3px solid #707ed6;
+    cursor: pointer;
+}
+.error-page button:hover {
+    background: transparent;
+    color: #707ed6;
+}

@@ -33,6 +33,8 @@ class Register extends React.Component {
         const passwordError = this.getFirstControlError('password');
         const repeatPasswordError = this.getFirstControlError('repeatPassword');
 
+        console.log(this.props.getFormState());
+
         return (
             <div className="login-register-page">
                 <h1>Register Page</h1>
@@ -88,9 +90,9 @@ const schema = yup.object({
         .min(6, 'Password must be more than 6 chars'),
 
     repeatPassword: yup.string('Repeat Password must be a string')
-        // .oneOf([yup.ref('password'), null], 'Passwords don\'t match')
-        // .required('Repeat Password is required')
-        // .min(6, 'Repeat Password must be more than 6 chars')
+        // .oneOf([yup.ref('password'), ''], 'Passwords don\'t match')
+        .required('Repeat Password is required')
+        .min(6, 'Password must be more than 6 chars')
 });
 
 export default withForm(Register, initialFormState, schema)

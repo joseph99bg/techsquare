@@ -2,6 +2,7 @@ import React from 'react';
 import postService from '../../services/post-services'
 import PostComments from '../Comments/PostComments/'
 import AddCommentForm from '../Comments/AddCommentForm/'
+import Loader from '../../Loader'
 import './style.css';
 
 class SinglePost extends React.Component {
@@ -34,7 +35,8 @@ class SinglePost extends React.Component {
     render() {
         const { post, comments } = this.state;
         const postId = this.props.match.params.id;
-        const { isLogged } = this.props;
+        const { isLogged } = this.props;        
+
         let hasComments = false;
         if (comments != null) {
             if (comments.length > 0) {
@@ -45,18 +47,18 @@ class SinglePost extends React.Component {
         if (post) {
             return (
                 <div className="post-item">
-                    <img src={this.state.post.image} alt={this.state.post.title}/>
+                    { this.state.post.image && <img src={this.state.post.image} alt={this.state.post.title}/> }
                     <h4 className="title">{this.state.post.title}</h4>
                     <h6 className="author">Author: {this.state.post.author.username}</h6>
                     <p className="description">{this.state.post.content}</p>
                     <hr/>
                     { hasComments && <PostComments comments={comments} />}
-                    { isLogged && <AddCommentForm history={this.props.history} postId={postId} handleNewComment={this.handleNewComment} /> }
+                    { isLogged && <AddCommentForm postId={postId} handleNewComment={this.handleNewComment} /> }
                 </div>
             )
         } else {
             return (
-                <div>Loading...</div>
+                <Loader />
             )
         }
     }

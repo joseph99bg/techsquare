@@ -27,13 +27,26 @@ class ListItem extends React.Component {
         } else {
             return (
                 <div className="blog-list-item">
-                    <img src={post.image} alt={post.title}/>
+                    { post.image && <img src={post.image} alt={post.title}/> }
+                    { !post.image && <img src="/images/no-image.png" alt={post.title}/> }
                     <h4 className="title">{post.title}</h4>
                     <p className="description">{post.content}</p>
                     <h6 className="author">Author: {post.author.username}</h6>
-                    <Link to={ "/post/" + post._id }><button>Read More</button></Link>
-                    { myPost && <button onClick={() => this.handleDelete(post._id)}>Delete</button> }
-                    { myPost && <Link to={ "/edit-post/" + post._id }><button>Edit</button></Link> }
+                    <Link to={ "/post/" + post._id }>
+                        <button>Read More</button>
+                    </Link>
+
+                    { myPost &&
+                    <Link to={ "/edit-post/" + post._id }>
+                        <button className="edit">
+                            <i className="fas fa-edit"></i>
+                        </button>
+                    </Link> }
+
+                    { myPost && 
+                    <button className="delete" onClick={() => this.handleDelete(post._id)}>
+                        <i className="far fa-trash-alt"></i>
+                    </button> }
                 </div>
             )
         }

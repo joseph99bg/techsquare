@@ -47,7 +47,7 @@
 .blog-list-item a {
     text-decoration: none;
 }
-.blog-list-item button {
+.blog-list-item button:not(.edit):not(.delete) {
     background: #717ED5;
     color: #FFF;
     font-family: 'Montserrat';
@@ -59,8 +59,35 @@
     border: 1px solid #717ED5;
     padding: 8px 30px;
     cursor: pointer;
+    text-decoration: none;
 }
-.blog-list-item button:hover {
+.blog-list-item button:not(.edit):not(.delete):hover {
     background: #FFF;
     color: #717ED5;
+}
+.blog-list-item button.edit {
+    text-decoration: none;
+    font-size: 30px;
+    color: #20aaea;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+.blog-list-item button.edit:hover {
+    color: #1584b7;
+}
+.blog-list-item button.delete {
+    text-decoration: none;
+    font-size: 30px;
+    color: #F00;
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+.blog-list-item button.delete:hover {
+    color: #940b0b;
 }

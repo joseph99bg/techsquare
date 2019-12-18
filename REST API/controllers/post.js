@@ -5,12 +5,12 @@ module.exports = {
 		all: (req, res, next) => {
 			const limit = +req.query.limit;
 			if (limit) {
-		      	models.Post.find().populate('author').sort({ _id: -1 }).limit(limit)
+		      	models.Post.find().populate('author').sort({ createdAt: -1 }).limit(limit)
 		        	.then(posts => res.send(posts))
 		        	.catch(next);
 		      	return;
 		    }
-		  	models.Post.find().populate('author')
+		  	models.Post.find().populate('author').sort({ createdAt: -1 })
 		    	.then(posts => res.send(posts))
 		    	.catch(next);
 		},
@@ -22,8 +22,7 @@ module.exports = {
 		},
 		authorPosts: (req, res, next) => {
 			const userId = req.user._id;
-			console.log(userId);
-			models.Post.find({ author: userId }).populate('author')
+			models.Post.find({ author: userId }).populate('author').sort({ createdAt: -1 })
 				.then(posts => res.send(posts))
 		    	.catch(next);
 		}

@@ -1,6 +1,6 @@
 .blog-list-holder {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
 }
 .blog-list-holder h1 {
     font-family: 'Orbitron';

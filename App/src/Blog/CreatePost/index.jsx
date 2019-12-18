@@ -1,6 +1,5 @@
 import React from 'react'
 import postService from '../../services/post-services'
-import { Redirect } from 'react-router-dom'
 import './style.css'
 
 class CreatePost extends React.Component {
@@ -98,7 +97,10 @@ class CreatePost extends React.Component {
                     </div>
                     <div>
                         <label htmlFor='image'>Image:</label>
-                        <a onClick={(event) => this.showWidget(widget)}>Upload Image</a>
+                        <button onClick={(event) => {
+                            event.preventDefault();
+                            this.showWidget(widget)
+                        }}>Upload Image</button>
                     </div>
                     { error ? <div className="error">{error}</div> : null }
                     <button type="submit">Create</button>

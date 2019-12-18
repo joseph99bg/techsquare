@@ -19,7 +19,7 @@ var postSchema = new Schema({
     ref: "User"
   },
   createdAt: {
-    type: String,
+    type: Date,
     default: new Date()
   },
   comments: [{ type: ObjectId, ref: 'Comment' }],

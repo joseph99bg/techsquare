@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import postService from '../../../services/post-services'
 import './style.css'
 
 const renderCards = (comments) => {
@@ -17,21 +16,14 @@ const renderCards = (comments) => {
     })
 }
 
-class PostComments extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        const { comments } = this.props;
-
-        return (
-            <div className="post-comments-list">
-                <h1>Comments:</h1>
-                { comments && renderCards(comments) }
-            </div>
-        )
-    }
+function PostComments(props) {
+    const { comments } = props;
+    return (
+        <div className="post-comments-list">
+            <h1>Comments:</h1>
+            { comments && renderCards(comments) }
+        </div>
+    )
 }
 
 export default PostComments

@@ -1,10 +1,10 @@
 import React from 'react';
-import Navigation from '../Navigation/navigation';
+import Navigation from '../Navigation';
 import BlogList from '../Blog/List';
 import SinglePost from '../Blog/SinglePost';
 import CreatePost from '../Blog/CreatePost';
 import EditPost from '../Blog/EditPost';
-import Footer from '../Footer/footer';
+import Footer from '../Footer';
 import Register from '../Account/Register';
 import Login from '../Account/Login';
 import Logout from '../Account/Logout';
@@ -15,8 +15,6 @@ import './App.css';
 
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import userService from '../services/user-services';
-
-// const Profile = React.lazy(() => import('../Profile/Profile'));
 
 function render(Cmp, otherProps) {
     return function (props) {
@@ -83,7 +81,6 @@ class App extends React.Component {
                             <Route path="*" component={ErrorPage}/>
                         </Switch>
                     </div>
-                    {/* <Footer isLogged={isLogged} /> */}
                     <Footer />
                 </div>
             </BrowserRouter >

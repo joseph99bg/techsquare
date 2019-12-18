@@ -2,7 +2,7 @@ import React from 'react'
 import postService from '../../../services/post-services'
 import './style.css'
 
-const AddCommentForm = ({ history, postId, handleNewComment }) => {
+const AddCommentForm = ({ postId, handleNewComment }) => {
     const textareaRef = React.useRef();
 
     const AddComment = React.useCallback(() => {
@@ -12,7 +12,7 @@ const AddCommentForm = ({ history, postId, handleNewComment }) => {
                 handleNewComment();
                 textareaRef.current.value = ''
             });
-    }, [textareaRef, history]);
+    }, [textareaRef, handleNewComment, postId]);
 
     return <div className="AddComment">
         <h1>Add a Comment:</h1>

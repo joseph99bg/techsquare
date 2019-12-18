@@ -3,6 +3,9 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 .copyright-holder span {
     color: #FFF;

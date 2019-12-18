@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage component should render correctly 1`] = `
+<div
+  className="error-page"
+>
+  <h1>
+    404
+  </h1>
+  <h3>
+    Page Not Found
+  </h3>
+  <div
+    className="btn-holder"
+  >
+    <Link
+      to="/"
+    >
+      <button>
+        <i
+          className="fas fa-home"
+        />
+         Return to Home
+      </button>
+    </Link>
+  </div>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render correctly 1`] = `
+<footer>
+  <div
+    className="copyright-holder"
+  >
+    <span>
+      TechSquare © 2019. All rights reserved.
+    </span>
+  </div>
+</footer>
+`;

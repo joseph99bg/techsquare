@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render correctly 1`] = `
+<header>
+  <div
+    className="top-bar"
+  >
+    <Link
+      to="/login"
+    >
+      Login
+    </Link>
+    <Link
+      to="/register"
+    >
+      Register
+    </Link>
+  </div>
+  <div
+    className="navigation-holder"
+  >
+    <div
+      className="logo-holder"
+    >
+      <Link
+        to="/"
+      >
+        <img
+          alt=""
+          src="/images/logo.jpg"
+        />
+      </Link>
+    </div>
+    <ul
+      className="navigation-list"
+    >
+      <li>
+        <Link
+          to="/posts"
+        >
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/about"
+        >
+          About
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/contacts"
+        >
+          Contacts
+        </Link>
+      </li>
+    </ul>
+  </div>
+</header>
+`;

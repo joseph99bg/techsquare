@@ -1,6 +1,5 @@
 import React from 'react'
 import postService from '../../services/post-services'
-import { Redirect } from 'react-router-dom'
 
 import './style.css'
 
@@ -11,7 +10,6 @@ class EditPost extends React.Component {
             title: '',
             content: '',
             image: '',
-            redirect: false,
             error: null,
             post: null
         }
@@ -78,7 +76,7 @@ class EditPost extends React.Component {
     }
 
     render() {
-        const { title, content, redirect, error } = this.state;
+        const { title, content, error } = this.state;
         
         let widget = window.cloudinary.createUploadWidget({
             cloudName: 'techsquare',

@@ -35,7 +35,7 @@ class SinglePost extends React.Component {
     render() {
         const { post, comments } = this.state;
         const postId = this.props.match.params.id;
-        const { isLogged } = this.props;        
+        const { isLogged } = this.props;
 
         let hasComments = false;
         if (comments != null) {
@@ -47,10 +47,10 @@ class SinglePost extends React.Component {
         if (post) {
             return (
                 <div className="post-item">
-                    { this.state.post.image && <img src={this.state.post.image} alt={this.state.post.title}/> }
-                    <h4 className="title">{this.state.post.title}</h4>
-                    <h6 className="author">Author: {this.state.post.author.username}</h6>
-                    <p className="description">{this.state.post.content}</p>
+                    { post.image && <img src={post.image} alt={post.title}/> }
+                    <h4 className="title">{post.title}</h4>
+                    <h6 className="author">Author: {post.author.username}</h6>
+                    <pre className="description">{post.content}</pre>
                     <hr/>
                     { hasComments && <PostComments comments={comments} />}
                     { isLogged && <AddCommentForm postId={postId} handleNewComment={this.handleNewComment} /> }

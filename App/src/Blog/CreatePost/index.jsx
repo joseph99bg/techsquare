@@ -49,7 +49,7 @@ class CreatePost extends React.Component {
             })
             .catch(err => {
                 this.setState({
-                    error: 'An error occured while creating your post!'
+                    error: 'Please fill the required fields!'
                 })
             })
     }
@@ -76,7 +76,7 @@ class CreatePost extends React.Component {
                 <h1>Create Post</h1>
                 <form onSubmit={this.submitHandler}>
                     <div>
-                        <label htmlFor='title'>Title:</label>
+                        <label htmlFor='title'>Title*:</label>
                         <input type="text"
                             value={title}
                             onChange={this.handleChange}
@@ -85,7 +85,7 @@ class CreatePost extends React.Component {
                             onBlur={this.validateInput} />
                     </div>
                     <div>
-                        <label htmlFor='content'>Content:</label>
+                        <label htmlFor='content'>Content*:</label>
                         <textarea
                             name="content"
                             id="content"

@@ -41,6 +41,8 @@ class BlogList extends Component {
         const { myPosts } = this.props;
         const { isLogged } = this.props;
         let title = 'Latest Posts';
+        console.log(posts);
+        
 
         if (myPosts) {
             title = 'My Posts'
@@ -49,7 +51,15 @@ class BlogList extends Component {
         }
         
         if (posts) {
-            if (posts)
+            if (posts.length < 1) {
+                return (
+                    <div className="blog-list-holder">
+                        <h1>{title}</h1>
+                        <h6 className="no-posts">No posts available</h6>
+                    </div>
+                )
+            }
+
             return (
                 <div className="blog-list-holder">
                     <h1>{title}</h1>

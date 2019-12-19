@@ -12,8 +12,11 @@
 .post-comment .author-name {
     margin-top: 0;
     font-family: 'Montserrat';
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;;
 }
 .post-comment .comment {
     margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
 }

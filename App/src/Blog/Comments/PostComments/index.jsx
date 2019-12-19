@@ -6,7 +6,7 @@ const renderCards = (comments) => {
         return (
             <Fragment key={comment._id}>
                 <div className="post-comment">
-                    <h3 className="author-name">{comment.author.username}</h3>
+                    <h3 className="author-name">Author: {comment.author.username}</h3>
                     <p className="comment">
                         {comment.content}
                     </p>

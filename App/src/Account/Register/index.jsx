@@ -33,32 +33,30 @@ class Register extends React.Component {
         const passwordError = this.getFirstControlError('password');
         const repeatPasswordError = this.getFirstControlError('repeatPassword');
 
-        console.log(this.props.getFormState());
-
         return (
             <div className="login-register-page">
                 <h1>Register Page</h1>
                 <form onSubmit={this.submitHandler}>
                     <div>
-                        <label htmlFor='username'>Username:</label>
+                        <label htmlFor='username'>Username*:</label>
                         <input type="text"
                             onChange={this.usernameOnChangeHandler} />
                         {usernameError && <div className="error">{usernameError}</div>}
                     </div>
                     <div>
-                        <label htmlFor='email'>Email:</label>
+                        <label htmlFor='email'>Email*:</label>
                         <input type="email"
                             onChange={this.emailOnChangeHandler} />
                         {emailError && <div className="error">{emailError}</div>}
                     </div>
                     <div>
-                        <label htmlFor='password'>Password:</label>
+                        <label htmlFor='password'>Password*:</label>
                         <input type="password"
                             onChange={this.passwordOnChangeHandler} />
                         {passwordError && <div className="error">{passwordError}</div>}
                     </div>
                     <div>
-                        <label htmlFor='repeatPassword'>Repeat Password:</label>
+                        <label htmlFor='repeatPassword'>Repeat Password*:</label>
                         <input type="password"
                             onChange={this.repeatPasswordOnChangeHandler} />
                         {repeatPasswordError && <div className="error">{repeatPasswordError}</div>}

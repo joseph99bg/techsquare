@@ -22,6 +22,7 @@
     font-size: 18px;
     color: #000;
     font-family: 'Monserrat';
+    white-space: pre-wrap;
 }
 .post-item hr {
     border: 0;

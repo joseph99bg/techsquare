@@ -9,3 +9,10 @@
     padding-left: 15px;
     font-size: 40px;
 }
+.blog-list-holder .no-posts {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    color: #333333;
+    padding-left: 15px;;
+}
